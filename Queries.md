@@ -7,7 +7,7 @@
     SELECT `bigquery-public-data.libraries_io.repository_dependencies`.repository_name_with_owner, `bigquery-public-data.libraries_io.repository_dependencies`.repository_id, manifest_filepath, dependency_project_name, dependency_requirements  
     FROM `bigquery-public-data.libraries_io.repository_dependencies`
 
-    * make repository dependency name = name in projects dependency field do you can get the time last pushed displayed in table 
+    * make repository dependency name = name in projects dependency field so you can get the time last pushed displayed in table 
     INNER JOIN `bigquery-public-data.libraries_io.projects_with_repository_fields`
     ON `bigquery-public-data.libraries_io.repository_dependencies`.dependency_project_name = `bigquery-public-data.libraries_io.projects_with_repository_fields`.name
     
