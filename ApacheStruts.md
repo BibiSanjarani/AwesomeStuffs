@@ -40,7 +40,7 @@ Lets start from the begginning...
 [Timeline infographic](https://image.slidesharecdn.com/strutstimelineinfo-171012175148/95/equifax-apache-struts-vulnerability-cve20175638-1-1024.jpg?cb=1507831817)
 
 ## The git-blame game - who did it?
- Everyone is blaming each other. Exquifax, blames a SysAdmin and Apache. Everyone else is blaming Equifax. Unfortunately, it's a case of he said, she said. So basically, it's everyones fault.
+ Everyone is blaming each other. Exquifax, blames a SysAdmin and Apache. Everyone else is blaming Equifax.
 ## Version shaming
 
 Apache Struts versions Struts 2.3.5 – Struts 2.3.31, Struts 2.5 – Struts 2.5.10 are reported to be affected. If you are using the Jakarta-based file upload Multipart parser, you should upgrade to Apache Struts version 2.3.32 or 2.5.10.1.
@@ -58,7 +58,7 @@ We're all thinking...
 > HINT: Nessus has one ;)
 3) Pick your exploit
 
->The vunerability has been around for a while now. There are a few exploit kits and vunerability scanning tools that can identify a host with Apache struts installed and even do the tedious bit of finding a vunerable version, rather than you doing it manually. This can also be ac
+>The vunerability has been around for a while now. There are a few exploit kits and vunerability scanning tools that can identify a host with Apache struts installed and even do the tedious bit of finding a vunerable version, rather than you doing it manually. This can also be stopped from having a direct risk by applying a WAF as it will prevent any incomplete connections from penetrating (common characteristic of scans).
 
 Lucky for you here's some that were cooked eariler...
 
@@ -109,13 +109,13 @@ This does not mean in other attacks a payload would not be used before or after 
 
 `[SHA256: 2d414c4fdc809777a47a0764beea6008576125cdc81d17cdc8076d289b508d56]`
 
->Nessus scans for this vunerability are visible when banner grabbing or even just by looking at the URIs. Try searching for `%nessus%` in your logs.
+>Nessus scans for this vunerability are visible when banner grabbing or even just by looking at the URIs. Try searching for `%nessus%` in your  HTTP logs.
 
 > Lateral movement from a different host can still occur. This is a bit harder to detect as they will probably already have root credentials..
 
 **Forensics:** If the exploit has been used, because of what it does (Remote command execution), you might see commands in your history that you didn't do.
 
->[The attack seen in server logs.](https://www.securonix.com/web/wp-content/uploads/2017/11/xequifax-3.png.pagespeed.ic.FHV-p3NAGZ.webp)
+> [The attack seen in server logs.](https://www.securonix.com/web/wp-content/uploads/2017/11/xequifax-3.png.pagespeed.ic.FHV-p3NAGZ.webp)
 
 ### Domains
 
@@ -138,11 +138,11 @@ What could have prevented the Equifax hack...
 Not all of Equifax's SysAdmin team were aware of a critical patch needing to be applied to hosts. So not all hosts were patched. Automated patch pipes would have solved this problem.
 
 ### Mature your Security Software Development Life Cycle
- Implement continuous deployment so software developers can have an in pipe dependency scanner to make sure dependencies are up to date.
+ Inplement continuous deployment so software developers can have an in pipe dependency scanner to make sure dependencies are up to date.
 > Here's where Synk come in.
 ## What can Apache do?
 
-Start fuzzing their applications or using a mutation testing platform to introduce incorrect inputs during development, so bugs are caught earlier.
+Start fuzzing their applications or using a mutation testing platform to introduce incorrect inputs during development, so exception error bugs are caught earlier.
 
 ## Appendix
 
