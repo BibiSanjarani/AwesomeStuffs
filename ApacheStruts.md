@@ -130,7 +130,7 @@ Sometimes these domains are recorded in Open Source Intelligence tools.
 Automating scanning rules that we could potentially use.
 
 - [Snort rule](https://gist.github.com/stamparm/a9cf56d40ac3ce5e48e36971946093f8) SIDs: 41818, 41819
-- [YARA rules](https://github.com/Yara-Rules/rules/blob/master/CVE_Rules/CVE-2017-11882.yar)
+- [YARA rules](https://www.fidelissecurity.com/tags/malware-detection)
 
 ## Learning from Equifax's mistakes
 What could have prevented the Equifax hack... 
