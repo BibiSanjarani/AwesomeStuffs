@@ -1,0 +1,402 @@
+[
+  {
+    "dependency_project_name": "vscode-nls",
+    "amount": "1258"
+  },
+  {
+    "dependency_project_name": "@types/node",
+    "amount": "1036"
+  },
+  {
+    "dependency_project_name": "object-assign",
+    "amount": "517"
+  },
+  {
+    "dependency_project_name": "semver",
+    "amount": "475"
+  },
+  {
+    "dependency_project_name": "rimraf",
+    "amount": "467"
+  },
+  {
+    "dependency_project_name": "glob",
+    "amount": "438"
+  },
+  {
+    "dependency_project_name": "minimist",
+    "amount": "438"
+  },
+  {
+    "dependency_project_name": "vscode-extension-telemetry",
+    "amount": "407"
+  },
+  {
+    "dependency_project_name": "debug",
+    "amount": "380"
+  },
+  {
+    "dependency_project_name": "ms",
+    "amount": "380"
+  },
+  {
+    "dependency_project_name": "minimatch",
+    "amount": "380"
+  },
+  {
+    "dependency_project_name": "extend",
+    "amount": "380"
+  },
+  {
+    "dependency_project_name": "iconv-lite",
+    "amount": "359"
+  },
+  {
+    "dependency_project_name": "chalk",
+    "amount": "356"
+  },
+  {
+    "dependency_project_name": "graceful-fs",
+    "amount": "343"
+  },
+  {
+    "dependency_project_name": "loose-envify",
+    "amount": "327"
+  },
+  {
+    "dependency_project_name": "eslint",
+    "amount": "322"
+  },
+  {
+    "dependency_project_name": "fbjs",
+    "amount": "319"
+  },
+  {
+    "dependency_project_name": "typescript",
+    "amount": "317"
+  },
+  {
+    "dependency_project_name": "mime",
+    "amount": "314"
+  },
+  {
+    "dependency_project_name": "chokidar",
+    "amount": "314"
+  },
+  {
+    "dependency_project_name": "optimist",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "mkdirp",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "path-is-absolute",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "readable-stream",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "balanced-match",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "core-util-is",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "inherits",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "brace-expansion",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "process-nextick-args",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "concat-map",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "nan",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "isarray",
+    "amount": "306"
+  },
+  {
+    "dependency_project_name": "async",
+    "amount": "298"
+  },
+  {
+    "dependency_project_name": "core-js",
+    "amount": "298"
+  },
+  {
+    "dependency_project_name": "escape-string-regexp",
+    "amount": "298"
+  },
+  {
+    "dependency_project_name": "jsonc-parser",
+    "amount": "296"
+  },
+  {
+    "dependency_project_name": "@types/mocha",
+    "amount": "296"
+  },
+  {
+    "dependency_project_name": "webpack",
+    "amount": "290"
+  },
+  {
+    "dependency_project_name": "prop-types",
+    "amount": "290"
+  },
+  {
+    "dependency_project_name": "argparse",
+    "amount": "285"
+  },
+  {
+    "dependency_project_name": "source-map",
+    "amount": "285"
+  },
+  {
+    "dependency_project_name": "normalize-path",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-extendable",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "extglob",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "util-deprecate",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "anymatch",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-extglob",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "expand-range",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "for-in",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "preserve",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-glob",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "for-own",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "uglify-js",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "set-immediate-shim",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "micromatch",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "arr-diff",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "parse-glob",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "isobject",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-primitive",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "strip-json-comments",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "async-each",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "repeat-element",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-buffer",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "expand-brackets",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "array-unique",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "repeat-string",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "fsevents",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "randomatic",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "object.omit",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "glob-base",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-number",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "arr-flatten",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "regex-cache",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "braces",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "readdirp",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-posix-bracket",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "binary-extensions",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "fill-range",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-binary-path",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "string_decoder",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-dotfile",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "kind-of",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "glob-parent",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "filename-regex",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "arrify",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "is-equal-shallow",
+    "amount": "277"
+  },
+  {
+    "dependency_project_name": "aws4",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "fstream",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "block-stream",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "find-up",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "abbrev",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "ansi-regex",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "are-we-there-yet",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "ansi-styles",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "delegates",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "deep-extend",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "json-schema",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "cliui",
+    "amount": "269"
+  },
+  {
+    "dependency_project_name": "performance-now",
+    "amount": "269"
+  }
+]
