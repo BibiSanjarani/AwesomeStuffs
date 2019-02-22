@@ -22,7 +22,35 @@
     LIMIT 1000
 
 # Top 100 NPM packages
-    #Get package name and count how may times it turns up in DB
+
+## Methodology
+
+### What do we need to do so we can get the top 100?
+
+- See how many times a package is listed as a dependency for projects.
+- Filter by NPM packages.
+- Aggregate data by the package name.
+- Order the data in decending order and limit how many results we want to see (100).
+
+### What's the easiest way to do this?
+
+#### Pick the right source. 
+Libraries.io has tables that fit the many to one relationship for dependencies. Getting this from github's database would require more work to represent this before we have actionable data to use. Since we are looking for the top 100 most popular npm packages, where popularity is determined by the *how **many** times a package is listed as **a dependency** * 
+
+I have chosen to use the table  `bigquery-public-data.libraries_io.repository_dependencies` to do this.
+
+Fields we want:
+
+
+- The name of a dependency for a project => `dependency_project_name `
+
+- The count of how many records the dependency of a project turns up. This isn't a field in the table so we have to run SQL function (COUNT) on the `dependency_project_name ` . We can set the alias for the count as anything => `COUNT(dependency_project_name) AS amount`
+
+- Name of the package manifest platform, so we can filter by `npm` => `manifest_platform`
+
+### Full query
+
+    ```#Get package name and count how may times it turns up in DB
       SELECT
      dependency_project_name,
      COUNT(dependency_project_name) AS amount
@@ -43,7 +71,7 @@
     
     #Only get the top 100
       LIMIT
-        100
+        100```
         
    
 
