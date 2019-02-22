@@ -41,7 +41,7 @@
       ORDER BY
         amount DESC  
     
-    #Only want the top 100
+    #Only get the top 100
       LIMIT
         100
         
@@ -72,3 +72,35 @@
           "amount": "383659"
         }
        
+# Top 100 NPM dependencies with patched or unpatched vunerabilities
+
+    #Get package name and count how may times it turns up in DB
+      SELECT
+     dependency_project_name,
+     COUNT(dependency_project_name) AS amount
+    
+    #From sample commits   
+      FROM
+        `bigquery-public-data.github_repos.sample_commits` commits
+    
+    #Make repo names equal the same from both Libraries.io and Github DB's 
+     INNER JOIN
+        `bigquery-public-data.libraries_io.repository_dependencies` repo_dependencies
+      ON
+        commits.repo_name = repo_dependencies.repository_name_with_owner
+    #Conditions: 1) only NPM packages, 2)Commit message contains one or more of key words 
+      WHERE
+        (repo_dependencies.manifest_platform LIKE "npm")
+        AND ((commits.message LIKE "%vunerability%")
+          OR (commits.message LIKE "%escape%")
+          OR (commits.message LIKE "%remote%"))
+    
+    #Aggregate results by popular npm package name  
+      GROUP BY
+        dependency_project_name
+    #Order by count - Decending 
+      ORDER BY
+        amount DESC
+    #Only get top 100  
+      LIMIT
+        100
