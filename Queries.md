@@ -20,3 +20,18 @@
     
     # set load so you dont download too much *
     LIMIT 1000
+
+# Top 100 NPM Libraries
+      SELECT
+     dependency_project_name,
+     COUNT(dependency_project_name) AS amount
+      FROM
+        `bigquery-public-data.libraries_io.repository_dependencies`
+      WHERE
+        manifest_platform LIKE "npm"
+      GROUP BY
+        dependency_project_name
+      ORDER BY
+        amount DESC  
+      LIMIT
+        100
