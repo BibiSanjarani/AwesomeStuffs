@@ -46,7 +46,8 @@
         100
         
    
-  ##Results
+
+## Results
   
   Top 5. See the rest => [Click me](./results-20190221-214858.json)
  
@@ -104,3 +105,27 @@
     #Only get top 100  
       LIMIT
         100
+## Results
+
+Top 5. See the rest => [Click me](./results-20190221-214858.json)
+
+        {
+          "dependency_project_name": "vscode-nls",
+          "amount": "1258"
+        },
+        {
+          "dependency_project_name": "@types/node",
+          "amount": "1036"
+        },
+        {
+          "dependency_project_name": "object-assign",
+          "amount": "517"
+        },
+        {
+          "dependency_project_name": "semver",
+          "amount": "475"
+        },
+        {
+          "dependency_project_name": "rimraf",
+          "amount": "467"
+        }
