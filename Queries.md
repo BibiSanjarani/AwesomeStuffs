@@ -21,17 +21,22 @@
     # set load so you dont download too much *
     LIMIT 1000
 
-# Top 100 NPM Libraries
+# Top 100 NPM packages
+       #Get package name and count how may times it turns up in DB
       SELECT
      dependency_project_name,
      COUNT(dependency_project_name) AS amount
       FROM
         `bigquery-public-data.libraries_io.repository_dependencies`
+      #Condition: Look for only NPM packages by filtering by manifest platform type
       WHERE
         manifest_platform LIKE "npm"
-      GROUP BY
+     #Aggregate results by package name
+     GROUP BY
         dependency_project_name
+      #Order by count - Decending
       ORDER BY
         amount DESC  
+      #Only want the top 100
       LIMIT
         100
