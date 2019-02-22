@@ -22,21 +22,430 @@
     LIMIT 1000
 
 # Top 100 NPM packages
-       #Get package name and count how may times it turns up in DB
+    #Get package name and count how may times it turns up in DB
       SELECT
      dependency_project_name,
      COUNT(dependency_project_name) AS amount
       FROM
         `bigquery-public-data.libraries_io.repository_dependencies`
-      #Condition: Look for only NPM packages by filtering by manifest platform type
+      
+    #Condition: Look for only NPM packages by filtering by manifest platform type
       WHERE
         manifest_platform LIKE "npm"
-     #Aggregate results by package name
+    
+    #Aggregate results by package name
      GROUP BY
         dependency_project_name
-      #Order by count - Decending
+    
+    #Order by count - Decending
       ORDER BY
         amount DESC  
-      #Only want the top 100
+    
+    #Only want the top 100
       LIMIT
         100
+        
+ ###Results
+ 
+       [
+        {
+          "dependency_project_name": "mocha",
+          "amount": "887231"
+        },
+        {
+          "dependency_project_name": "express",
+          "amount": "495152"
+        },
+        {
+          "dependency_project_name": "debug",
+          "amount": "411817"
+        },
+        {
+          "dependency_project_name": "async",
+          "amount": "400717"
+        },
+        {
+          "dependency_project_name": "babel-core",
+          "amount": "383659"
+        },
+        {
+          "dependency_project_name": "istanbul",
+          "amount": "381332"
+        },
+        {
+          "dependency_project_name": "lodash",
+          "amount": "379674"
+        },
+        {
+          "dependency_project_name": "eslint",
+          "amount": "379036"
+        },
+        {
+          "dependency_project_name": "chalk",
+          "amount": "375380"
+        },
+        {
+          "dependency_project_name": "ansi-regex",
+          "amount": "369830"
+        },
+        {
+          "dependency_project_name": "ansi-styles",
+          "amount": "360685"
+        },
+        {
+          "dependency_project_name": "acorn",
+          "amount": "335631"
+        },
+        {
+          "dependency_project_name": "body-parser",
+          "amount": "331687"
+        },
+        {
+          "dependency_project_name": "ajv",
+          "amount": "321295"
+        },
+        {
+          "dependency_project_name": "balanced-match",
+          "amount": "309238"
+        },
+        {
+          "dependency_project_name": "assert-plus",
+          "amount": "306058"
+        },
+        {
+          "dependency_project_name": "glob",
+          "amount": "305419"
+        },
+        {
+          "dependency_project_name": "camelcase",
+          "amount": "300720"
+        },
+        {
+          "dependency_project_name": "inherits",
+          "amount": "294101"
+        },
+        {
+          "dependency_project_name": "brace-expansion",
+          "amount": "285664"
+        },
+        {
+          "dependency_project_name": "rimraf",
+          "amount": "285070"
+        },
+        {
+          "dependency_project_name": "accepts",
+          "amount": "284577"
+        },
+        {
+          "dependency_project_name": "arr-diff",
+          "amount": "281513"
+        },
+        {
+          "dependency_project_name": "babel-loader",
+          "amount": "280269"
+        },
+        {
+          "dependency_project_name": "array-unique",
+          "amount": "275780"
+        },
+        {
+          "dependency_project_name": "aws-sign2",
+          "amount": "274631"
+        },
+        {
+          "dependency_project_name": "arr-flatten",
+          "amount": "272385"
+        },
+        {
+          "dependency_project_name": "core-js",
+          "amount": "271650"
+        },
+        {
+          "dependency_project_name": "core-util-is",
+          "amount": "270667"
+        },
+        {
+          "dependency_project_name": "commander",
+          "amount": "267488"
+        },
+        {
+          "dependency_project_name": "boom",
+          "amount": "267479"
+        },
+        {
+          "dependency_project_name": "anymatch",
+          "amount": "263938"
+        },
+        {
+          "dependency_project_name": "babel-runtime",
+          "amount": "262867"
+        },
+        {
+          "dependency_project_name": "asn1",
+          "amount": "262366"
+        },
+        {
+          "dependency_project_name": "concat-map",
+          "amount": "261174"
+        },
+        {
+          "dependency_project_name": "webpack",
+          "amount": "256992"
+        },
+        {
+          "dependency_project_name": "align-text",
+          "amount": "256508"
+        },
+        {
+          "dependency_project_name": "grunt",
+          "amount": "254990"
+        },
+        {
+          "dependency_project_name": "argparse",
+          "amount": "253750"
+        },
+        {
+          "dependency_project_name": "aws4",
+          "amount": "252593"
+        },
+        {
+          "dependency_project_name": "co",
+          "amount": "250567"
+        },
+        {
+          "dependency_project_name": "asynckit",
+          "amount": "249833"
+        },
+        {
+          "dependency_project_name": "mkdirp",
+          "amount": "246303"
+        },
+        {
+          "dependency_project_name": "react",
+          "amount": "246021"
+        },
+        {
+          "dependency_project_name": "amdefine",
+          "amount": "245934"
+        },
+        {
+          "dependency_project_name": "babel-code-frame",
+          "amount": "244868"
+        },
+        {
+          "dependency_project_name": "minimist",
+          "amount": "244501"
+        },
+        {
+          "dependency_project_name": "gulp",
+          "amount": "242632"
+        },
+        {
+          "dependency_project_name": "cliui",
+          "amount": "241019"
+        },
+        {
+          "dependency_project_name": "bluebird",
+          "amount": "240637"
+        },
+        {
+          "dependency_project_name": "array-uniq",
+          "amount": "236872"
+        },
+        {
+          "dependency_project_name": "abbrev",
+          "amount": "236689"
+        },
+        {
+          "dependency_project_name": "braces",
+          "amount": "233919"
+        },
+        {
+          "dependency_project_name": "escape-string-regexp",
+          "amount": "232478"
+        },
+        {
+          "dependency_project_name": "isarray",
+          "amount": "231498"
+        },
+        {
+          "dependency_project_name": "arrify",
+          "amount": "229814"
+        },
+        {
+          "dependency_project_name": "tap",
+          "amount": "229386"
+        },
+        {
+          "dependency_project_name": "ms",
+          "amount": "228101"
+        },
+        {
+          "dependency_project_name": "async-each",
+          "amount": "227172"
+        },
+        {
+          "dependency_project_name": "autoprefixer",
+          "amount": "227166"
+        },
+        {
+          "dependency_project_name": "array-flatten",
+          "amount": "226197"
+        },
+        {
+          "dependency_project_name": "request",
+          "amount": "225720"
+        },
+        {
+          "dependency_project_name": "graceful-fs",
+          "amount": "223220"
+        },
+        {
+          "dependency_project_name": "babel-preset-es2015",
+          "amount": "222493"
+        },
+        {
+          "dependency_project_name": "caseless",
+          "amount": "222469"
+        },
+        {
+          "dependency_project_name": "depd",
+          "amount": "221715"
+        },
+        {
+          "dependency_project_name": "bcrypt-pbkdf",
+          "amount": "219902"
+        },
+        {
+          "dependency_project_name": "ajv-keywords",
+          "amount": "219869"
+        },
+        {
+          "dependency_project_name": "builtin-modules",
+          "amount": "218958"
+        },
+        {
+          "dependency_project_name": "chai",
+          "amount": "218501"
+        },
+        {
+          "dependency_project_name": "semver",
+          "amount": "217785"
+        },
+        {
+          "dependency_project_name": "babel-register",
+          "amount": "217276"
+        },
+        {
+          "dependency_project_name": "readable-stream",
+          "amount": "216289"
+        },
+        {
+          "dependency_project_name": "combined-stream",
+          "amount": "215549"
+        },
+        {
+          "dependency_project_name": "cryptiles",
+          "amount": "215177"
+        },
+        {
+          "dependency_project_name": "code-point-at",
+          "amount": "213251"
+        },
+        {
+          "dependency_project_name": "array-union",
+          "amount": "212080"
+        },
+        {
+          "dependency_project_name": "css-loader",
+          "amount": "210009"
+        },
+        {
+          "dependency_project_name": "babel-generator",
+          "amount": "208403"
+        },
+        {
+          "dependency_project_name": "minimatch",
+          "amount": "208401"
+        },
+        {
+          "dependency_project_name": "bytes",
+          "amount": "207484"
+        },
+        {
+          "dependency_project_name": "babel-messages",
+          "amount": "207267"
+        },
+        {
+          "dependency_project_name": "babylon",
+          "amount": "207034"
+        },
+        {
+          "dependency_project_name": "decamelize",
+          "amount": "206980"
+        },
+        {
+          "dependency_project_name": "esprima",
+          "amount": "204050"
+        },
+        {
+          "dependency_project_name": "escape-html",
+          "amount": "202650"
+        },
+        {
+          "dependency_project_name": "cross-spawn",
+          "amount": "201313"
+        },
+        {
+          "dependency_project_name": "babel-types",
+          "amount": "201080"
+        },
+        {
+          "dependency_project_name": "react-dom",
+          "amount": "200933"
+        },
+        {
+          "dependency_project_name": "fs.realpath",
+          "amount": "199352"
+        },
+        {
+          "dependency_project_name": "delayed-stream",
+          "amount": "197832"
+        },
+        {
+          "dependency_project_name": "binary-extensions",
+          "amount": "196475"
+        },
+        {
+          "dependency_project_name": "extend",
+          "amount": "196466"
+        },
+        {
+          "dependency_project_name": "mime-db",
+          "amount": "196005"
+        },
+        {
+          "dependency_project_name": "cookie",
+          "amount": "195713"
+        },
+        {
+          "dependency_project_name": "qs",
+          "amount": "195396"
+        },
+        {
+          "dependency_project_name": "center-align",
+          "amount": "195275"
+        },
+        {
+          "dependency_project_name": "chokidar",
+          "amount": "194558"
+        },
+        {
+          "dependency_project_name": "inflight",
+          "amount": "194392"
+        },
+        {
+          "dependency_project_name": "dashdash",
+          "amount": "194292"
+        }
+      ]
